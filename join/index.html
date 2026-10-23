@@ -6,6 +6,8 @@
 <!-- The address holds a group code: never pass it on to another site. -->
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="noindex">
+<!-- Safari's bar at the top: Get FlightChat, or Open it if installed. -->
+<meta name="apple-itunes-app" content="app-id=6819023795">
 <title>Join a FlightChat Group</title>
 <style>
   /* Shown only when FlightChat didn't open: no app on this phone, or opened on a computer.
@@ -43,6 +45,8 @@
   .code { font: 500 1.5rem/1.2 ui-monospace, "SF Mono", Menlo, monospace; overflow-wrap: anywhere; }
   ol { margin: 0; padding-inline-start: 1.25rem; display: grid; gap: 8px; }
   [hidden] { display: none; }
+  .badge { display: inline-block; line-height: 0; margin-top: 4px; }
+  .badge img { height: 50px; width: auto; }
 </style>
 </head>
 <body>
@@ -62,6 +66,12 @@
       <li>Open this link again, or scan the QR code again with the Camera.</li>
       <li>Or open FlightChat, tap <strong>+</strong>, then <strong>Join</strong>, and type the code above.</li>
     </ol>
+    <a class="badge" href="https://apps.apple.com/app/id6819023795">
+      <picture>
+        <source srcset="/app-store-badge-white.svg" media="(prefers-color-scheme: dark)">
+        <img src="/app-store-badge-black.svg" width="150" height="50" alt="Download on the App Store">
+      </picture>
+    </a>
   </section>
 </main>
 <script>

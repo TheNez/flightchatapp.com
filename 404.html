@@ -6,6 +6,7 @@
 <title>Page not found · FlightChat</title>
 <meta name="robots" content="noindex">
 <meta name="description" content="Chat with your group on the plane. No internet needed.">
+<meta name="apple-itunes-app" content="app-id=6819023795">
 <link rel="icon" href="/icon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,6 +57,8 @@
   a { color: var(--accent); font-weight: 700; text-underline-offset: 3px; }
   a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
   footer { color: var(--muted); font-size: 0.9rem; margin-top: 12px; }
+  .badge { display: inline-block; line-height: 0; margin-top: 4px; }
+  .badge img { height: 50px; width: auto; }
 </style>
 </head>
 <body>
@@ -64,6 +67,12 @@
   <h1>FlightChat</h1>
   <p class="tagline">Chat with your group on the plane. No internet needed.</p>
   <p class="lost">There's nothing at this address. Looking for something below?</p>
+  <a class="badge" href="https://apps.apple.com/app/id6819023795">
+    <picture>
+      <source srcset="/app-store-badge-white.svg" media="(prefers-color-scheme: dark)">
+      <img src="/app-store-badge-black.svg" width="150" height="50" alt="Download on the App Store">
+    </picture>
+  </a>
   <nav aria-label="FlightChat pages">
     <a href="https://flightchatapp.com/help/">Help</a>
     <a href="https://flightchatapp.com/privacy/">Privacy Policy</a>
