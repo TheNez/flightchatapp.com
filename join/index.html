@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- The address holds a group code: never pass it on to another site. -->
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<title>Join a FlightChat Group</title>
+<style>
+  /* Shown only when FlightChat didn't open: no app on this phone, or opened on a computer.
+     System fonts only, so nothing is loaded from anywhere else. */
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --bg: #f2f4fa; --surface: #ffffff; --fg: #151a33; --muted: #596079;
+    --line: #d9deec; --accent: #4a3ed4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0c1023; --surface: #151a33; --fg: #e8ebf7; --muted: #9ba3c0;
+      --line: #272d4b; --accent: #a39bff; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0c1023; --surface: #151a33; --fg: #e8ebf7; --muted: #9ba3c0;
+    --line: #272d4b; --accent: #a39bff; color-scheme: dark;
+  }
+  body {
+    margin: 0; padding: 48px 16px 72px;
+    background: var(--bg); color: var(--fg);
+    font: 1.0625rem/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  }
+  main { max-width: 34rem; margin: 0 auto; display: grid; gap: 24px; }
+  .wordmark { font-weight: 700; color: var(--accent); }
+  h1 { margin: 0; font-size: clamp(1.9rem, 6vw, 2.6rem); line-height: 1.1; letter-spacing: -0.02em; }
+  p { margin: 0; }
+  .muted { color: var(--muted); }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+    padding: 20px; display: grid; gap: 12px;
+  }
+  .label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+  .code { font: 500 1.5rem/1.2 ui-monospace, "SF Mono", Menlo, monospace; overflow-wrap: anywhere; }
+  ol { margin: 0; padding-inline-start: 1.25rem; display: grid; gap: 8px; }
+  [hidden] { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <div class="wordmark">FlightChat</div>
+  <h1 id="title">Join a FlightChat group</h1>
+  <p class="muted">FlightChat lets your group chat on the plane with no internet. This link opens the app when it's installed.</p>
+
+  <section class="card" id="group" hidden>
+    <div class="label">Group code</div>
+    <div class="code" id="code"></div>
+  </section>
+
+  <section class="card">
+    <ol>
+      <li>Install FlightChat from the App Store <strong>before your flight</strong>. You need internet for this step.</li>
+      <li>Open this link again, or scan the QR code again with the Camera.</li>
+      <li>Or open FlightChat, tap <strong>+</strong>, then <strong>Join</strong>, and type the code above.</li>
+    </ol>
+  </section>
+</main>
+<script>
+  // Shown on this page only. Nothing here is sent anywhere.
+  const params = new URLSearchParams(location.search);
+  const code = params.get("code");
+  const name = params.get("name");
+  if (code) {
+    document.getElementById("code").textContent = code;
+    document.getElementById("group").hidden = false;
+  }
+  if (name) document.getElementById("title").textContent = "Join " + name + " on FlightChat";
+</script>
+</body>
+</html>

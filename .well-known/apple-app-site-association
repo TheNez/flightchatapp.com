@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["42M9YPNFLA.app.flightchat.ios"],
+        "components": [
+          { "/": "/join", "comment": "Group invites: QR codes and Share Code links" },
+          { "/": "/join/" }
+        ]
+      }
+    ]
+  }
+}
