@@ -198,6 +198,10 @@
     border-radius: 20px; border: 1px solid var(--line); background: var(--surface);
     box-shadow: 0 8px 22px rgb(21 26 51 / 0.10);
   }
+  /* On an iPad the app adds class="ipad", and the iPad pictures replace the iPhone ones where both exist. */
+  .shots .ipad-shot { display: none; }
+  html.ipad .shots .ipad-shot { display: block; border-radius: 14px; }
+  html.ipad .shots .phone-shot { display: none; }
   .shots figcaption { font-size: 0.85rem; line-height: 1.4; color: var(--muted); text-align: center; }
   .languages { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.9rem; }
   .languages a { color: var(--muted); text-decoration: none; }
@@ -246,12 +250,14 @@
       <h2>Avant le vol</h2>
       <p>Préparez tout pendant que vous êtes ensemble, à la maison ou à la porte d'embarquement :</p>
       <ol>
-        <li>Installez FlightChat sur chaque téléphone du groupe.</li>
+        <li>Installez FlightChat sur chaque iPhone ou iPad du groupe.</li>
         <li>Une personne crée le groupe : sur le premier écran, choisissez <strong>Nouveau groupe</strong> et donnez-lui un nom.</li>
         <li>Les autres le rejoignent : ils scannent le code QR du groupe, ou choisissent <strong>Rejoindre un groupe</strong> et demandent à le rejoindre à proximité. Voir « Rejoindre un groupe » plus bas.</li>
         <li>Envoyez un message de test et vérifiez que tout le monde le reçoit.</li>
       </ol>
-      <p>À la première ouverture, autorisez FlightChat à trouver des appareils sur votre réseau local. Sans cela, il ne peut pas trouver votre groupe.</p>
+      <p>À la première ouverture, autorisez FlightChat à trouver des appareils sur votre réseau local. Sans cela, il ne peut pas trouver votre groupe. Pour commencer sans groupe, par exemple pour écrire des notes ou jouer au Solitaire d'abord, touchez <strong>✕</strong> sur le premier écran ; vous pourrez créer ou rejoindre un groupe plus tard avec <strong>+</strong>.</p>
+      <p>Après la configuration de FlightChat, un court tutoriel montre l'essentiel. Pour le revoir, ouvrez Réglages et touchez <strong>Afficher le tutoriel</strong>.</p>
+      <p>FlightChat fonctionne sur iPhone et iPad, qui peuvent discuter et jouer ensemble. Sur iPad, la liste des discussions reste à côté de la discussion ouverte, et vous pouvez tourner l'iPad dans tous les sens ou utiliser FlightChat à côté d'une autre app.</p>
     </section>
 
     <section>
@@ -264,7 +270,7 @@
       <p>Les téléphones ne se connectent que lorsque FlightChat est ouvert. Quand vous revenez dans l'app, ils se reconnectent d'eux-mêmes et récupèrent tout ce qu'ils ont manqué.</p>
       <div class="shots">
         <figure>
-          <img src="../help-chats.fr.jpg" width="600" height="1303" alt="La liste des discussions de FlightChat : une carte d'état en haut, puis deux groupes, Family et Beach trip, et une section Personnes avec Mom, Dad, Sam et Mia." loading="lazy">
+          <img class="phone-shot" src="../help-chats.fr.jpg" width="600" height="1303" alt="La liste des discussions de FlightChat : une carte d'état en haut, puis deux groupes, Family et Beach trip, et une section Personnes avec Mom, Dad, Sam et Mia." loading="lazy"><img class="ipad-shot" src="../help-chats.ipad.fr.jpg" width="900" height="1200" alt="La liste des discussions de FlightChat : une carte d'état en haut, puis deux groupes, Family et Beach trip, et une section Personnes avec Mom, Dad, Sam et Mia." loading="lazy">
           <figcaption>La liste des discussions : qui est connecté, vos groupes et leurs membres</figcaption>
         </figure>
       </div>
@@ -283,7 +289,7 @@
       <p>Il y a trois façons de faire :</p>
       <ul>
         <li><strong>Scannez le code QR</strong> dans Infos du groupe sur le téléphone d’un membre. Pointez l’appareil photo de l’iPhone vers le code et touchez la bannière, ou dans FlightChat touchez <strong>+</strong>, puis <strong>Rejoindre</strong> et <strong>Scanner le code QR</strong>.</li>
-        <li><strong>Demandez à rejoindre à proximité.</strong> La personne qui a créé le groupe ouvre Infos du groupe et touche <strong>Ajouter des personnes à proximité</strong>. Vous touchez <strong>+</strong>, puis <strong>Rejoindre</strong>, <strong>Trouver des groupes à proximité</strong> et <strong>Demander à rejoindre</strong>. Elle vérifie que les deux écrans affichent les trois mêmes emojis, puis touche <strong>Autoriser</strong>.</li>
+        <li><strong>Demandez à rejoindre à proximité.</strong> La personne qui a créé le groupe ouvre Infos du groupe et touche <strong>Ajouter des personnes à proximité</strong>. Vous touchez <strong>+</strong>, puis <strong>Rejoindre</strong>, <strong>Trouver des groupes à proximité</strong> et <strong>Demander à rejoindre</strong>. Elle vérifie que les deux écrans affichent les trois mêmes emojis, puis touche <strong>Autoriser</strong>. Les deux téléphones doivent avoir FlightChat 1.2 ou une version ultérieure ; si l'un a une version plus ancienne, FlightChat l'indique, et le code QR fonctionne toujours.</li>
         <li><strong>Vous avez reçu un lien ?</strong> Touchez-le pour ouvrir FlightChat, prêt à rejoindre le groupe. Vous pouvez aussi saisir le code via <strong>+</strong> → <strong>Rejoindre</strong> ; majuscules et espaces n’ont pas d’importance.</li>
       </ul>
       <h3>Renommer, partager ou quitter un groupe</h3>
@@ -291,23 +297,23 @@
       <p><strong>Gardez les codes secrets.</strong> Toute personne qui a le code ou le code QR peut rejoindre le groupe et lire sa discussion. Quand quelqu’un demande à rejoindre à proximité, n’acceptez que les personnes que vous connaissez, et vérifiez que les emojis correspondent.</p>
       <div class="shots">
         <figure>
-          <img src="../help-create.fr.jpg" width="600" height="1303" alt="L’écran Nouveau groupe avec le nom Ski trip, un code généré, un bouton Partager le code et le code QR du groupe." loading="lazy">
+          <img class="phone-shot" src="../help-create.fr.jpg" width="600" height="1303" alt="L’écran Nouveau groupe avec le nom Ski trip, un code généré, un bouton Partager le code et le code QR du groupe." loading="lazy"><img class="ipad-shot" src="../help-create.ipad.fr.jpg" width="900" height="1200" alt="L’écran Nouveau groupe avec le nom Ski trip, un code généré, un bouton Partager le code et le code QR du groupe." loading="lazy">
           <figcaption>Nouveau groupe : nommez-le, un code est créé pour vous</figcaption>
         </figure>
         <figure>
-          <img src="../help-join.fr.jpg" width="600" height="1303" alt="L’écran Rejoindre un groupe avec Trouver des groupes à proximité, Scanner le code QR et un champ pour saisir un code." loading="lazy">
+          <img class="phone-shot" src="../help-join.fr.jpg" width="600" height="1303" alt="L’écran Rejoindre un groupe avec Trouver des groupes à proximité, Scanner le code QR et un champ pour saisir un code." loading="lazy"><img class="ipad-shot" src="../help-join.ipad.fr.jpg" width="900" height="1200" alt="L’écran Rejoindre un groupe avec Trouver des groupes à proximité, Scanner le code QR et un champ pour saisir un code." loading="lazy">
           <figcaption>Rejoindre : trouvez un groupe à proximité ou scannez son code QR</figcaption>
         </figure>
         <figure>
-          <img src="../help-nearby.fr.jpg" width="600" height="1303" alt="Groupes à proximité montrant Soccer team, créé par Coach Dana, avec un bouton Demander à rejoindre." loading="lazy">
+          <img class="phone-shot" src="../help-nearby.fr.jpg" width="600" height="1303" alt="Groupes à proximité montrant Soccer team, créé par Coach Dana, avec un bouton Demander à rejoindre." loading="lazy"><img class="ipad-shot" src="../help-nearby.ipad.fr.jpg" width="900" height="1200" alt="Groupes à proximité montrant Soccer team, créé par Coach Dana, avec un bouton Demander à rejoindre." loading="lazy">
           <figcaption>Groupes à proximité : touchez Demander à rejoindre</figcaption>
         </figure>
         <figure>
-          <img src="../help-add-people.fr.jpg" width="600" height="1303" alt="Ajouter des personnes à proximité montrant le code QR du groupe et Noa qui demande à le rejoindre, avec trois emojis et les boutons Autoriser et Refuser." loading="lazy">
+          <img class="phone-shot" src="../help-add-people.fr.jpg" width="600" height="1303" alt="Ajouter des personnes à proximité montrant le code QR du groupe et Noa qui demande à le rejoindre, avec trois emojis et les boutons Autoriser et Refuser." loading="lazy"><img class="ipad-shot" src="../help-add-people.ipad.fr.jpg" width="900" height="1200" alt="Ajouter des personnes à proximité montrant le code QR du groupe et Noa qui demande à le rejoindre, avec trois emojis et les boutons Autoriser et Refuser." loading="lazy">
           <figcaption>Ajouter des personnes à proximité : vérifiez les emojis, puis Autoriser</figcaption>
         </figure>
         <figure>
-          <img src="../help-group-info.fr.jpg" width="600" height="1303" alt="Infos du groupe montrant le nom du groupe, son code avec Partager le code, et son code QR." loading="lazy">
+          <img class="phone-shot" src="../help-group-info.fr.jpg" width="600" height="1303" alt="Infos du groupe montrant le nom du groupe, son code avec Partager le code, et son code QR." loading="lazy"><img class="ipad-shot" src="../help-group-info.ipad.fr.jpg" width="900" height="1200" alt="Infos du groupe montrant le nom du groupe, son code avec Partager le code, et son code QR." loading="lazy">
           <figcaption>Infos du groupe : nom, code et code QR</figcaption>
         </figure>
       </div>
@@ -319,22 +325,27 @@
       <ul>
         <li><strong>Discussions de groupe et individuelles :</strong> chaque groupe a sa propre discussion. <strong>Personnes</strong> liste tous ceux avec qui vous partagez un groupe ; pour écrire à une personne en privé, touchez son nom. Si deux personnes ont le même nom, leur groupe s’affiche. Les personnes avec qui vous ne partagez plus de groupe passent dans <strong>Anciennes discussions</strong> : vous pouvez toujours lire ces échanges, mais les nouveaux messages attendent que vous soyez à nouveau dans un groupe ensemble. Balayez vers la gauche pour en supprimer une.</li>
         <li><strong>Photos, vidéos, GIF et fichiers :</strong> touchez <strong>+</strong> à côté du champ de message. Choisissez <strong>Prendre une photo ou une vidéo</strong> pour utiliser l'appareil photo (vidéos jusqu'à 2 minutes), ou choisissez un élément existant. Touchez le smiley pour les autocollants et les GIF.</li>
+        <li><strong>Autocollants :</strong> touchez le visage souriant dans le champ de message. Il y a quatre séries, Voyage, Famille, Émotions et Vacances ; touchez une icône en bas pour aller à l'une d'elles. Ils sont gratuits et fonctionnent sans internet.</li>
         <li><strong>Réactions :</strong> maintenez le doigt sur un message, puis choisissez un emoji. Vous pouvez aussi copier le texte depuis ce menu.</li>
+        <li><strong>Répondre :</strong> faites glisser un message vers la droite, ou maintenez le doigt dessus et touchez <strong>Répondre</strong>. Le message auquel vous répondez s'affiche au-dessus du vôtre ; touchez-le pour y revenir. Les personnes qui ont encore une ancienne version de FlightChat reçoivent votre réponse sans lui.</li>
+        <li><strong>Message vocal :</strong> quand le champ de message est vide, maintenez le bouton du micro à côté et parlez, puis relâchez pour envoyer. Pour l'annuler, faites glisser le doigt vers la gauche avant de relâcher. Touchez un message vocal pour l'écouter. Un message vocal peut durer jusqu'à 2 minutes. Les personnes qui ont encore une ancienne version de FlightChat le reçoivent comme fichier audio.</li>
+        <li><strong>Mes notes et jeux :</strong> dans la liste des discussions, au-dessus de vos groupes, se trouve un journal que vous seul pouvez voir. Écrivez des notes, ajoutez des photos, des autocollants ou des messages vocaux ; ils restent sur cet appareil et ne sont jamais envoyés. Les notes de chaque jour sont sous sa date. Maintenez le doigt sur une note pour la modifier ou la supprimer. Il est toujours là, même avant de rejoindre un groupe.</li>
+        <li><strong>Thèmes de discussion (Pro) :</strong> dans une discussion, touchez <strong>⋯</strong>, puis <strong>Thème de la discussion</strong>, et choisissez Classique, Océan, Coucher de soleil, Forêt, Ciel étoilé ou Bonbon. Chaque discussion garde le sien, seulement sur cet appareil : chacun voit la discussion avec son propre thème.</li>
         <li><strong>Plein écran :</strong> touchez une photo ou une vidéo. Tournez le téléphone pour l'agrandir. Utilisez le bouton de partage pour l'enregistrer.</li>
         <li><strong>Coches :</strong> <kbd>✓</kbd> signifie que le message est enregistré et envoyé aux personnes connectées. <kbd>✓✓</kbd> signifie que tous ses destinataires l'ont reçu.</li>
         <li><strong>Pas à proximité ?</strong> Les messages aux personnes non connectées partent dès la reconnexion.</li>
       </ul>
       <div class="shots">
         <figure>
-          <img src="../help-group-chat.fr.jpg" width="600" height="1303" alt="Une discussion de groupe avec des messages de Dad, Mia et Mom, un autocollant Wheels up!, une photo de nuages prise par le hublot avec des réactions, et des doubles coches." loading="lazy">
+          <img class="phone-shot" src="../help-group-chat.fr.jpg" width="600" height="1303" alt="Une discussion de groupe avec des messages de Dad, Mia et Mom, un autocollant Wheels up!, une photo de nuages prise par le hublot avec des réactions, et des doubles coches." loading="lazy"><img class="ipad-shot" src="../help-group-chat.ipad.fr.jpg" width="900" height="1200" alt="Une discussion de groupe avec des messages de Dad, Mia et Mom, un autocollant Wheels up!, une photo de nuages prise par le hublot avec des réactions, et des doubles coches." loading="lazy">
           <figcaption>Une discussion de groupe avec un autocollant, une photo et des réactions</figcaption>
         </figure>
         <figure>
-          <img src="../help-reactions.fr.jpg" width="600" height="1303" alt="Maintenir le doigt sur un message affiche une rangée d'emoji pour réagir et un bouton Copier." loading="lazy">
+          <img class="phone-shot" src="../help-reactions.fr.jpg" width="600" height="1303" alt="Maintenir le doigt sur un message affiche une rangée d'emoji pour réagir et un bouton Copier." loading="lazy"><img class="ipad-shot" src="../help-reactions.ipad.fr.jpg" width="900" height="1200" alt="Maintenir le doigt sur un message affiche une rangée d'emoji pour réagir et un bouton Copier." loading="lazy">
           <figcaption>Maintenez le doigt sur un message pour réagir</figcaption>
         </figure>
         <figure>
-          <img src="../help-attach.fr.jpg" width="600" height="1303" alt="Le menu + avec Prendre une photo ou une vidéo, Photo, vidéo ou GIF, GIF et autocollants, et Fichier." loading="lazy">
+          <img class="phone-shot" src="../help-attach.fr.jpg" width="600" height="1303" alt="Le menu + avec Prendre une photo ou une vidéo, Photo, vidéo ou GIF, GIF et autocollants, et Fichier." loading="lazy"><img class="ipad-shot" src="../help-attach.ipad.fr.jpg" width="900" height="1200" alt="Le menu + avec Prendre une photo ou une vidéo, Photo, vidéo ou GIF, GIF et autocollants, et Fichier." loading="lazy">
           <figcaption>+ envoie photos, vidéos, GIF, autocollants et fichiers</figcaption>
         </figure>
       </div>
@@ -355,7 +366,7 @@
       <p><a href="#rules">Les règles de chaque jeu ↓</a></p>
       <div class="shots">
         <figure>
-          <img src="../help-game.fr.jpg" width="600" height="1303" alt="Une partie de morpion avec Mom : Mom a le centre et un coin, vous avez le coin opposé, et c'est à vous de jouer." loading="lazy">
+          <img class="phone-shot" src="../help-game.fr.jpg" width="600" height="1303" alt="Une partie de morpion avec Mom : Mom a le centre et un coin, vous avez le coin opposé, et c'est à vous de jouer." loading="lazy"><img class="ipad-shot" src="../help-game.ipad.fr.jpg" width="900" height="1200" alt="Une partie de morpion avec Mom : Mom a le centre et un coin, vous avez le coin opposé, et c'est à vous de jouer." loading="lazy">
           <figcaption>Morpion avec Mom : à vous de jouer</figcaption>
         </figure>
       </div>
@@ -368,12 +379,13 @@
         <li><strong>Bataille :</strong> chacun retourne sa carte du dessus et la plus forte remporte les deux (l'as est la plus forte). En cas d'égalité, le gagnant de la manche suivante les remporte aussi. Après 26 manches, celui qui a gagné le plus de cartes l'emporte.</li>
         <li><strong>Huit américain :</strong> sept cartes chacun. Jouez une carte de la même couleur ou de la même valeur que celle du talon, ou piochez. Les huit se posent sur n'importe quoi et vous laissent choisir la couleur suivante. Le premier à se débarrasser de toutes ses cartes gagne.</li>
         <li><strong>Gin-rami :</strong> dix cartes chacun. À votre tour, piochez dans la pioche ou la défausse, puis défaussez une carte. Formez des combinaisons : trois ou quatre cartes de même valeur, ou au moins trois cartes qui se suivent dans une même couleur. Avec 10 points ou moins de cartes restantes, vous pouvez frapper pour finir la donne ; sans aucune, c'est gin.</li>
+        <li><strong>Solitaire :</strong> un jeu pour une personne, donc personne n'a besoin d'être à proximité. Dans <strong>Mes notes et jeux</strong>, touchez <strong>+</strong>, puis <strong>Jouer à un jeu</strong> et <strong>Solitaire</strong>, et choisissez Facile (retourner une carte à la fois) ou Difficile (trois). Vos victoires et meilleurs temps restent sur cet appareil.</li>
         <li><strong>Jeux de groupe à 3 ou 4 :</strong> dans une discussion de groupe, touchez <strong>+</strong>, puis <strong>Jouer à un jeu</strong>, et choisissez Huit américain ou Gin-rami. Choisissez 2 ou 3 personnes (celles à proximité sont déjà cochées) et touchez <strong>Distribuer</strong>. On joue chacun son tour. Au Huit américain, chacun reçoit 5 cartes ; au gin-rami, 10 chacun à trois et 7 chacun à quatre, et quand quelqu'un frappe, tous les autres posent leurs cartes et comptent. Tout le groupe voit la partie, mais seuls les joueurs reçoivent des cartes, et personne ne voit la main des autres.</li>
       </ul>
       <p>Votre main ne s'affiche que sur votre téléphone ; l'autre joueur voit combien de cartes vous avez, pas lesquelles. À la fin d'une partie de gin-rami, les deux mains sont montrées pour vérifier le score.</p>
       <div class="shots">
         <figure>
-          <img src="../help-cards.fr.jpg" width="600" height="1303" alt="Une partie de gin-rami avec Dad : les dix cartes de Dad face cachée en haut, la pioche et la défausse au milieu, et votre main en bas, regroupée en combinaisons et cartes restantes." loading="lazy">
+          <img class="phone-shot" src="../help-cards.fr.jpg" width="600" height="1303" alt="Une partie de gin-rami avec Dad : les dix cartes de Dad face cachée en haut, la pioche et la défausse au milieu, et votre main en bas, regroupée en combinaisons et cartes restantes." loading="lazy"><img class="ipad-shot" src="../help-cards.ipad.fr.jpg" width="900" height="1200" alt="Une partie de gin-rami avec Dad : les dix cartes de Dad face cachée en haut, la pioche et la défausse au milieu, et votre main en bas, regroupée en combinaisons et cartes restantes." loading="lazy">
           <figcaption>Gin-rami avec Dad : à vous de piocher</figcaption>
         </figure>
       </div>
@@ -381,7 +393,7 @@
 
     <section id="pro">
       <h2>FlightChat Pro</h2>
-      <p>FlightChat est gratuit, avec les discussions, les photos, les autocollants et la plupart des jeux. <strong>FlightChat Pro</strong> est un achat unique qui permet de lancer le backgammon, le huit américain et le gin-rami. Dans la liste des jeux, ils affichent <strong>Pro</strong> tant que vous ne l'avez pas.</p>
+      <p>FlightChat est gratuit, avec les discussions, les photos, les autocollants et la plupart des jeux. <strong>FlightChat Pro</strong> est un achat unique qui permet de lancer le backgammon, le huit américain et le gin-rami. Dans la liste des jeux, ils affichent <strong>Pro</strong> tant que vous ne l'avez pas. Il débloque aussi les thèmes de discussion.</p>
       <p>Seule la personne qui lance une partie Pro a besoin de Pro. Vos amis qui ne l'ont pas peuvent rejoindre et jouer les parties que vous lancez, à deux ou en groupe.</p>
       <p>Achetez-le dans <strong>Réglages → FlightChat Pro</strong>, ou en touchant un jeu Pro. C'est un paiement unique, sans abonnement, partagé avec votre famille via le partage familial. L'achat nécessite Internet : achetez-le avant le vol ; ensuite, Pro fonctionne hors ligne. Sur un nouvel iPhone, touchez <strong>Restaurer les achats</strong>.</p>
     </section>
@@ -448,6 +460,14 @@
         <li>Quand vos cartes perdantes valent 10 ou moins après la défausse, vous pouvez frapper pour finir la donne ; si vous n'en avez aucune, c'est gin. Les autres joueurs ajoutent alors les cartes qu'ils peuvent aux combinaisons de celui qui a frappé (pas après un gin).</li>
         <li>Score : celui qui frappe gagne la différence de cartes perdantes avec chaque autre joueur. Un gin rapporte les cartes perdantes de tous plus 25. Un joueur qui en a autant ou moins que celui qui a frappé le contre et gagne la différence plus 25. S'il ne reste que 2 cartes dans la pioche, la donne est nulle.</li>
       </ul>
+      <h3 id="rules-solitaire">Solitaire</h3>
+      <ul>
+        <li>Sept piles sont distribuées : une carte dans la première, deux dans la suivante, jusqu'à sept, avec seulement la carte du dessus de chacune face visible. Le reste du paquet forme la pioche.</li>
+        <li>Le but est de monter toutes les cartes sur les quatre emplacements du haut, un par couleur, dans l'ordre de l'as au roi.</li>
+        <li>Sur les piles, une carte se pose sur une carte d'un rang au-dessus et de l'autre couleur : un 6 rouge sur un 7 noir. Vous pouvez déplacer une carte avec celles posées dessus. Seul un roi va sur une pile vide. Déplacer la dernière carte visible d'une pile retourne celle du dessous.</li>
+        <li>Touchez la pioche pour retourner des cartes : une à la fois en Facile, trois en Difficile, où seule celle du dessus peut être jouée. Quand elle est vide, touchez-la pour remettre les cartes et les parcourir à nouveau.</li>
+        <li>Touchez une carte pour la déplacer là où elle va, d'abord à l'emplacement de sa couleur en haut. <strong>Annuler</strong> reprend un coup. Quand toutes les cartes sont visibles, <strong>Terminer</strong> joue le reste pour vous.</li>
+      </ul>
     </section>
 
     <section>
@@ -455,7 +475,7 @@
       <p>Ouvrez la discussion, touchez <strong>⋯</strong>, puis <strong>Exporter la discussion</strong>. FlightChat crée un fichier ZIP avec la conversation en texte et les photos, vidéos et fichiers présents sur votre téléphone. Enregistrez-le dans Fichiers, envoyez-le par AirDrop ou par e-mail une fois de nouveau en ligne.</p>
       <div class="shots">
         <figure>
-          <img src="../help-chat-menu.fr.jpg" width="600" height="1303" alt="Le menu ⋯ d'une discussion de groupe avec Infos du groupe et Exporter la discussion." loading="lazy">
+          <img class="phone-shot" src="../help-chat-menu.fr.jpg" width="600" height="1303" alt="Le menu ⋯ d'une discussion de groupe avec Infos du groupe et Exporter la discussion." loading="lazy"><img class="ipad-shot" src="../help-chat-menu.ipad.fr.jpg" width="900" height="1200" alt="Le menu ⋯ d'une discussion de groupe avec Infos du groupe et Exporter la discussion." loading="lazy">
           <figcaption>⋯ ouvre Infos du groupe et Exporter la discussion</figcaption>
         </figure>
       </div>

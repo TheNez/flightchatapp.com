@@ -198,6 +198,10 @@
     border-radius: 20px; border: 1px solid var(--line); background: var(--surface);
     box-shadow: 0 8px 22px rgb(21 26 51 / 0.10);
   }
+  /* On an iPad the app adds class="ipad", and the iPad pictures replace the iPhone ones where both exist. */
+  .shots .ipad-shot { display: none; }
+  html.ipad .shots .ipad-shot { display: block; border-radius: 14px; }
+  html.ipad .shots .phone-shot { display: none; }
   .shots figcaption { font-size: 0.85rem; line-height: 1.4; color: var(--muted); text-align: center; }
   .languages { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.9rem; }
   .languages a { color: var(--muted); text-decoration: none; }
@@ -246,12 +250,14 @@
       <h2>Before you fly</h2>
       <p>Set everything up while you're together at home or at the gate:</p>
       <ol>
-        <li>Install FlightChat on every phone in your group.</li>
+        <li>Install FlightChat on every iPhone or iPad in your group.</li>
         <li>One person creates the group: on the first screen, choose <strong>New Group</strong> and give it a name.</li>
         <li>Everyone else joins: they scan the group's QR code, or choose <strong>Join a Group</strong> and ask to join it nearby. See "Join a group" below.</li>
         <li>Send a test message and check that everyone gets it.</li>
       </ol>
-      <p>The first time FlightChat opens, allow it to find devices on your local network. It can't find your group without this.</p>
+      <p>The first time FlightChat opens, allow it to find devices on your local network. It can't find your group without this. To start without a group, for example to write notes or play Solitaire first, tap <strong>✕</strong> on the first screen; you can create or join one later from <strong>+</strong>.</p>
+      <p>After you set up FlightChat, a short tutorial shows the basics. To see it again, open Settings and tap <strong>Show Tutorial</strong>.</p>
+      <p>FlightChat works on iPhone and iPad, and they chat and play games together. On iPad, your list of chats stays beside the open chat, and you can turn the iPad any way or use FlightChat next to another app.</p>
     </section>
 
     <section>
@@ -264,7 +270,7 @@
       <p>Phones only connect while FlightChat is open. When you come back to the app, phones reconnect by themselves and catch up on anything they missed.</p>
       <div class="shots">
         <figure>
-          <img src="help-chats.jpg" width="600" height="1303" alt="The FlightChat chat list: a status card at the top, then two groups, Family and Beach trip, and a People section listing Mom, Dad, Sam and Mia." loading="lazy">
+          <img class="phone-shot" src="help-chats.jpg" width="600" height="1303" alt="The FlightChat chat list: a status card at the top, then two groups, Family and Beach trip, and a People section listing Mom, Dad, Sam and Mia." loading="lazy"><img class="ipad-shot" src="help-chats.ipad.jpg" width="900" height="1200" alt="The FlightChat chat list: a status card at the top, then two groups, Family and Beach trip, and a People section listing Mom, Dad, Sam and Mia." loading="lazy">
           <figcaption>The chat list: who's connected, your groups, and the people in them</figcaption>
         </figure>
       </div>
@@ -283,7 +289,7 @@
       <p>There are three ways:</p>
       <ul>
         <li><strong>Scan the QR code</strong> in Group Info on a member's phone. Point the iPhone camera at it and tap the banner, or in FlightChat tap <strong>+</strong>, then <strong>Join</strong> and <strong>Scan QR Code</strong>.</li>
-        <li><strong>Ask to join nearby.</strong> The person who started the group opens Group Info and taps <strong>Add People Nearby</strong>. You tap <strong>+</strong>, then <strong>Join</strong>, <strong>Find Groups Nearby</strong> and <strong>Ask to Join</strong>. They check that both screens show the same three emojis, then tap <strong>Allow</strong>.</li>
+        <li><strong>Ask to join nearby.</strong> The person who started the group opens Group Info and taps <strong>Add People Nearby</strong>. You tap <strong>+</strong>, then <strong>Join</strong>, <strong>Find Groups Nearby</strong> and <strong>Ask to Join</strong>. They check that both screens show the same three emojis, then tap <strong>Allow</strong>. Both phones need FlightChat 1.2 or later; if one has an older version, FlightChat says so, and the QR code still works.</li>
         <li><strong>Got a link?</strong> Tap it to open FlightChat ready to join. You can also type the code under <strong>+</strong> → <strong>Join</strong>; capital letters and spaces don't matter.</li>
       </ul>
       <h3>Rename, share or leave a group</h3>
@@ -291,23 +297,23 @@
       <p><strong>Keep codes private.</strong> Anyone with the code or the QR code can join the group and read its chat. When people ask to join nearby, only allow people you know, and check the emojis match.</p>
       <div class="shots">
         <figure>
-          <img src="help-create.jpg" width="600" height="1303" alt="The New Group screen with the name Ski trip, a made-up code, a Share Code button and the group's QR code." loading="lazy">
+          <img class="phone-shot" src="help-create.jpg" width="600" height="1303" alt="The New Group screen with the name Ski trip, a made-up code, a Share Code button and the group's QR code." loading="lazy"><img class="ipad-shot" src="help-create.ipad.jpg" width="900" height="1200" alt="The New Group screen with the name Ski trip, a made-up code, a Share Code button and the group's QR code." loading="lazy">
           <figcaption>New group: name it, and a code is made for you</figcaption>
         </figure>
         <figure>
-          <img src="help-join.jpg" width="600" height="1303" alt="The Join Group screen with Find Groups Nearby, Scan QR Code, and a field to type a group code." loading="lazy">
+          <img class="phone-shot" src="help-join.jpg" width="600" height="1303" alt="The Join Group screen with Find Groups Nearby, Scan QR Code, and a field to type a group code." loading="lazy"><img class="ipad-shot" src="help-join.ipad.jpg" width="900" height="1200" alt="The Join Group screen with Find Groups Nearby, Scan QR Code, and a field to type a group code." loading="lazy">
           <figcaption>Join: find a group nearby or scan its QR code</figcaption>
         </figure>
         <figure>
-          <img src="help-nearby.jpg" width="600" height="1303" alt="Groups Nearby listing Soccer team, started by Coach Dana, with an Ask to Join button." loading="lazy">
+          <img class="phone-shot" src="help-nearby.jpg" width="600" height="1303" alt="Groups Nearby listing Soccer team, started by Coach Dana, with an Ask to Join button." loading="lazy"><img class="ipad-shot" src="help-nearby.ipad.jpg" width="900" height="1200" alt="Groups Nearby listing Soccer team, started by Coach Dana, with an Ask to Join button." loading="lazy">
           <figcaption>Groups nearby: tap Ask to Join</figcaption>
         </figure>
         <figure>
-          <img src="help-add-people.jpg" width="600" height="1303" alt="Add People Nearby showing the group's QR code and Noa asking to join, with three emojis and Allow and Decline buttons." loading="lazy">
+          <img class="phone-shot" src="help-add-people.jpg" width="600" height="1303" alt="Add People Nearby showing the group's QR code and Noa asking to join, with three emojis and Allow and Decline buttons." loading="lazy"><img class="ipad-shot" src="help-add-people.ipad.jpg" width="900" height="1200" alt="Add People Nearby showing the group's QR code and Noa asking to join, with three emojis and Allow and Decline buttons." loading="lazy">
           <figcaption>Add People Nearby: check the emojis, then Allow</figcaption>
         </figure>
         <figure>
-          <img src="help-group-info.jpg" width="600" height="1303" alt="Group Info showing the group's name, its code with Share Code, and its QR code." loading="lazy">
+          <img class="phone-shot" src="help-group-info.jpg" width="600" height="1303" alt="Group Info showing the group's name, its code with Share Code, and its QR code." loading="lazy"><img class="ipad-shot" src="help-group-info.ipad.jpg" width="900" height="1200" alt="Group Info showing the group's name, its code with Share Code, and its QR code." loading="lazy">
           <figcaption>Group Info: name, code and QR code</figcaption>
         </figure>
       </div>
@@ -319,22 +325,27 @@
       <ul>
         <li><strong>Group and 1-on-1 chats:</strong> each group has its own chat. <strong>People</strong> lists everyone you share a group with; to message one person privately, tap their name there. Two people with the same name show which group they're in. People you no longer share a group with move to <strong>Past Chats</strong>: you can still read those chats, but new messages wait until you're in a group together again. Swipe left on one to delete it.</li>
         <li><strong>Photos, videos, GIFs and files:</strong> tap <strong>+</strong> next to the message box. Choose <strong>Take Photo or Video</strong> to use the camera (videos up to 2 minutes), or pick something you already have. Tap the smiley face for stickers and GIFs.</li>
+        <li><strong>Stickers:</strong> tap the smiley face in the message box. There are four packs, Travel, Family, Feelings and Vacation; tap an icon at the bottom to jump to one. They're free and work with no internet.</li>
         <li><strong>Reactions:</strong> touch and hold a message, then pick an emoji. You can copy text from there too.</li>
+        <li><strong>Reply:</strong> swipe a message to the right, or touch and hold it and tap <strong>Reply</strong>. The message you're answering shows above yours, and tapping it takes you back to it. Anyone still on an older version of FlightChat gets your answer without it.</li>
+        <li><strong>Voice message:</strong> when the message field is empty, hold the microphone button next to it and speak, then let go to send. To throw it away instead, slide your finger to the left before letting go. Tap a voice message to play it. Voice messages can be up to 2 minutes long. Anyone still on an older version of FlightChat gets it as an audio file.</li>
+        <li><strong>My Notes and Games:</strong> in the chat list, above your groups, is a journal only you can see. Write notes, add photos, stickers or voice messages; they stay on this device and are never sent. Each day's notes are under its date. Touch and hold a note to edit or delete it. It's always there, even before you join a group.</li>
+        <li><strong>Chat themes (Pro):</strong> in a chat, tap <strong>⋯</strong>, then <strong>Chat Theme</strong>, and pick Classic, Ocean, Sunset, Forest, Night Sky or Candy. Each chat keeps its own, only on this device: everyone sees the chat in their own theme.</li>
         <li><strong>Full screen:</strong> tap a photo or video. Turn your phone sideways to see it larger. Use the share button to save it.</li>
         <li><strong>Ticks:</strong> <kbd>✓</kbd> means the message is saved and sent to whoever is connected. <kbd>✓✓</kbd> means everyone it's for has it.</li>
         <li><strong>Not nearby?</strong> Messages to people who aren't connected are sent when you reconnect.</li>
       </ul>
       <div class="shots">
         <figure>
-          <img src="help-group-chat.jpg" width="600" height="1303" alt="A group chat with messages from Dad, Mia and Mom, a Wheels up! sticker, a photo of clouds from the window with reactions, and double ticks." loading="lazy">
+          <img class="phone-shot" src="help-group-chat.jpg" width="600" height="1303" alt="A group chat with messages from Dad, Mia and Mom, a Wheels up! sticker, a photo of clouds from the window with reactions, and double ticks." loading="lazy"><img class="ipad-shot" src="help-group-chat.ipad.jpg" width="900" height="1200" alt="A group chat with messages from Dad, Mia and Mom, a Wheels up! sticker, a photo of clouds from the window with reactions, and double ticks." loading="lazy">
           <figcaption>A group chat with a sticker, a photo and reactions</figcaption>
         </figure>
         <figure>
-          <img src="help-reactions.jpg" width="600" height="1303" alt="Holding a message shows a row of emoji to react with and a copy button." loading="lazy">
+          <img class="phone-shot" src="help-reactions.jpg" width="600" height="1303" alt="Holding a message shows a row of emoji to react with and a copy button." loading="lazy"><img class="ipad-shot" src="help-reactions.ipad.jpg" width="900" height="1200" alt="Holding a message shows a row of emoji to react with and a copy button." loading="lazy">
           <figcaption>Touch and hold a message to react</figcaption>
         </figure>
         <figure>
-          <img src="help-attach.jpg" width="600" height="1303" alt="The + menu with Take Photo or Video, Photo, Video or GIF, GIFs &amp; Stickers, and File." loading="lazy">
+          <img class="phone-shot" src="help-attach.jpg" width="600" height="1303" alt="The + menu with Take Photo or Video, Photo, Video or GIF, GIFs &amp; Stickers, and File." loading="lazy"><img class="ipad-shot" src="help-attach.ipad.jpg" width="900" height="1200" alt="The + menu with Take Photo or Video, Photo, Video or GIF, GIFs &amp; Stickers, and File." loading="lazy">
           <figcaption>+ sends photos, videos, GIFs, stickers and files</figcaption>
         </figure>
       </div>
@@ -355,7 +366,7 @@
       <p><a href="#rules">The rules of every game ↓</a></p>
       <div class="shots">
         <figure>
-          <img src="help-game.jpg" width="600" height="1303" alt="A Tic-Tac-Toe game with Mom: Mom has the center and a corner, you have the opposite corner, and it's your turn." loading="lazy">
+          <img class="phone-shot" src="help-game.jpg" width="600" height="1303" alt="A Tic-Tac-Toe game with Mom: Mom has the center and a corner, you have the opposite corner, and it's your turn." loading="lazy"><img class="ipad-shot" src="help-game.ipad.jpg" width="900" height="1200" alt="A Tic-Tac-Toe game with Mom: Mom has the center and a corner, you have the opposite corner, and it's your turn." loading="lazy">
           <figcaption>Tic-Tac-Toe with Mom: your turn</figcaption>
         </figure>
       </div>
@@ -368,12 +379,13 @@
         <li><strong>War:</strong> you each flip your top card and the higher card takes both (aces are high). On a tie, the next round's winner takes those cards too. After 26 rounds, whoever has won more cards wins.</li>
         <li><strong>Crazy Eights:</strong> seven cards each. Play a card of the same suit or rank as the top of the pile, or draw. Eights can go on anything and let you name the suit to follow. Play all your cards first to win.</li>
         <li><strong>Gin Rummy:</strong> ten cards each. On your turn, draw from the stock or the discard pile, then discard. Make melds: three or four of a kind, or three or more in a row of one suit. With 10 points or less left over, you can knock to end the hand; with none left over, that's gin.</li>
+        <li><strong>Solitaire:</strong> a game for one, so nobody needs to be nearby. In <strong>My Notes and Games</strong>, tap <strong>+</strong>, then <strong>Play a Game</strong> and <strong>Solitaire</strong>, and choose Easy (turn over one card at a time) or Hard (three). Your wins and best times stay on this device.</li>
         <li><strong>Group games for 3 or 4:</strong> in a group chat, tap <strong>+</strong>, then <strong>Play a Game</strong>, and choose Crazy Eights or Gin Rummy. Pick 2 or 3 people (those nearby are already ticked) and tap <strong>Deal</strong>. Turns go round in order. In Crazy Eights everyone gets 5 cards; in Gin Rummy 10 each for three players and 7 each for four, and when someone knocks, everyone else lays off and counts. Everyone in the group sees the game, but only the players get cards, and nobody sees anyone else's hand.</li>
       </ul>
       <p>Your hand stays on your phone's screen only; the other player sees how many cards you hold, not which. At the end of Gin Rummy, both hands are shown so you can check the score.</p>
       <div class="shots">
         <figure>
-          <img src="help-cards.jpg" width="600" height="1303" alt="A Gin Rummy game with Dad: Dad's ten cards face down at the top, the stock and the discard pile in the middle, and your hand at the bottom, grouped into melds and leftover cards." loading="lazy">
+          <img class="phone-shot" src="help-cards.jpg" width="600" height="1303" alt="A Gin Rummy game with Dad: Dad's ten cards face down at the top, the stock and the discard pile in the middle, and your hand at the bottom, grouped into melds and leftover cards." loading="lazy"><img class="ipad-shot" src="help-cards.ipad.jpg" width="900" height="1200" alt="A Gin Rummy game with Dad: Dad's ten cards face down at the top, the stock and the discard pile in the middle, and your hand at the bottom, grouped into melds and leftover cards." loading="lazy">
           <figcaption>Gin Rummy with Dad: your turn to draw</figcaption>
         </figure>
       </div>
@@ -381,7 +393,7 @@
 
     <section id="pro">
       <h2>FlightChat Pro</h2>
-      <p>FlightChat is free, including chats, photos, stickers and most games. <strong>FlightChat Pro</strong> is a one-time purchase that lets you start Backgammon, Crazy Eights and Gin Rummy. In the game list these show <strong>Pro</strong> until you have it.</p>
+      <p>FlightChat is free, including chats, photos, stickers and most games. <strong>FlightChat Pro</strong> is a one-time purchase that lets you start Backgammon, Crazy Eights and Gin Rummy. In the game list these show <strong>Pro</strong> until you have it. It also unlocks chat themes.</p>
       <p>Only the person who starts a Pro game needs Pro. Friends without it can join and play the games you start, 1-on-1 or in a group chat.</p>
       <p>Buy it in <strong>Settings → FlightChat Pro</strong>, or by tapping a Pro game. It's one payment with no subscription, and it's shared with your family through Family Sharing. Buying needs internet, so buy before the flight; once bought, Pro works offline. On a new iPhone, tap <strong>Restore Purchases</strong>.</p>
     </section>
@@ -448,6 +460,14 @@
         <li>When your deadwood is 10 or less after discarding, you can knock to end the hand; with none at all, that's gin. The other players then add any cards they can to the knocker's melds (not after gin).</li>
         <li>Scoring: the knocker wins the difference in deadwood with each other player. Gin scores everyone's deadwood plus 25. A player with as little deadwood as the knocker undercuts them and wins the difference plus 25. If the stock gets down to 2 cards, the hand is a draw.</li>
       </ul>
+      <h3 id="rules-solitaire">Solitaire</h3>
+      <ul>
+        <li>Seven piles are dealt: one card in the first, two in the next, up to seven, with only the top card of each face up. The rest of the deck is the stock.</li>
+        <li>The goal is to move every card up to the four places at the top, one for each suit, in order from ace to king.</li>
+        <li>On the piles, a card goes on one a rank higher of the other color: a red 6 on a black 7. You can move a card with the cards on top of it. Only a king goes on an empty pile. Moving a pile's last face-up card turns over the one under it.</li>
+        <li>Tap the stock to turn over cards: one at a time on Easy, three on Hard, where only the top one can be played. When it's used up, tap it to put the cards back and go through them again.</li>
+        <li>Tap a card to move it where it fits, its suit's place at the top first. <strong>Undo</strong> takes back a move. When every card is face up, <strong>Finish</strong> plays the rest for you.</li>
+      </ul>
     </section>
 
     <section>
@@ -455,7 +475,7 @@
       <p>Open the chat, tap <strong>⋯</strong>, then <strong>Export Chat</strong>. FlightChat makes a ZIP file with the conversation as text and the photos, videos and files that are on your phone. Save it to Files, AirDrop it, or email it once you're back online.</p>
       <div class="shots">
         <figure>
-          <img src="help-chat-menu.jpg" width="600" height="1303" alt="The ⋯ menu in a group chat with Group Info and Export Chat." loading="lazy">
+          <img class="phone-shot" src="help-chat-menu.jpg" width="600" height="1303" alt="The ⋯ menu in a group chat with Group Info and Export Chat." loading="lazy"><img class="ipad-shot" src="help-chat-menu.ipad.jpg" width="900" height="1200" alt="The ⋯ menu in a group chat with Group Info and Export Chat." loading="lazy">
           <figcaption>⋯ opens Group Info and Export Chat</figcaption>
         </figure>
       </div>

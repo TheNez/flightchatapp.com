@@ -198,6 +198,10 @@
     border-radius: 20px; border: 1px solid var(--line); background: var(--surface);
     box-shadow: 0 8px 22px rgb(21 26 51 / 0.10);
   }
+  /* On an iPad the app adds class="ipad", and the iPad pictures replace the iPhone ones where both exist. */
+  .shots .ipad-shot { display: none; }
+  html.ipad .shots .ipad-shot { display: block; border-radius: 14px; }
+  html.ipad .shots .phone-shot { display: none; }
   .shots figcaption { font-size: 0.85rem; line-height: 1.4; color: var(--muted); text-align: center; }
   .languages { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.9rem; }
   .languages a { color: var(--muted); text-decoration: none; }
@@ -246,12 +250,14 @@
       <h2>出発前に</h2>
       <p>家や搭乗口で、みんな一緒にいるうちに準備しておきましょう：</p>
       <ol>
-        <li>グループ全員のiPhoneにFlightChatをインストールします。</li>
+        <li>グループ全員のiPhoneまたはiPadにFlightChatをインストールします。</li>
         <li>1人がグループを作成します。最初の画面で<strong>新規グループ</strong>を選び、名前を付けます。</li>
         <li>ほかの人は参加します。グループのQRコードをスキャンするか、<strong>グループに参加</strong>を選んで近くから参加をリクエストします。下の「グループに参加する」を参照してください。</li>
         <li>テストメッセージを送って、全員に届くか確認します。</li>
       </ol>
-      <p>初めてFlightChatを開いたら、ローカルネットワーク上のデバイスの検索を許可してください。許可しないとグループを見つけられません。</p>
+      <p>初めてFlightChatを開いたら、ローカルネットワーク上のデバイスの検索を許可してください。許可しないとグループを見つけられません。グループなしで始めたいとき（先にメモを書いたりソリティアで遊んだりしたいときなど）は、最初の画面で <strong>✕</strong> をタップします。グループはあとで <strong>+</strong> から作成や参加ができます。</p>
+      <p>FlightChatの設定が終わると、短いチュートリアルで基本を紹介します。もう一度見るには、設定を開いて<strong>チュートリアルを表示</strong>をタップします。</p>
+      <p>FlightChatはiPhoneとiPadで使え、iPhoneとiPadの間でもチャットやゲームができます。iPadでは、開いているチャットの横にチャットの一覧が表示されたままになり、どの向きでも使えるほか、ほかのAppと並べて使うこともできます。</p>
     </section>
 
     <section>
@@ -264,7 +270,7 @@
       <p>FlightChatを開いている間だけ接続されます。アプリに戻ると自動的に再接続し、見逃した内容を受け取ります。</p>
       <div class="shots">
         <figure>
-          <img src="../help-chats.ja.jpg" width="600" height="1303" alt="FlightChatのチャット一覧：上部に状態カード、その下に Family と Beach trip の2つのグループ、Mom、Dad、Sam、Mia が並ぶメンバー欄。" loading="lazy">
+          <img class="phone-shot" src="../help-chats.ja.jpg" width="600" height="1303" alt="FlightChatのチャット一覧：上部に状態カード、その下に Family と Beach trip の2つのグループ、Mom、Dad、Sam、Mia が並ぶメンバー欄。" loading="lazy"><img class="ipad-shot" src="../help-chats.ipad.ja.jpg" width="900" height="1200" alt="FlightChatのチャット一覧：上部に状態カード、その下に Family と Beach trip の2つのグループ、Mom、Dad、Sam、Mia が並ぶメンバー欄。" loading="lazy">
           <figcaption>チャット一覧：接続中の人、グループ、メンバー</figcaption>
         </figure>
       </div>
@@ -283,7 +289,7 @@
       <p>方法は3つあります。</p>
       <ul>
         <li>メンバーのiPhoneの「グループ情報」にある<strong>QRコードをスキャン</strong>します。iPhoneのカメラを向けてバナーをタップするか、FlightChatで<strong>+</strong>をタップしてから<strong>参加</strong>、<strong>QRコードをスキャン</strong>をタップします。</li>
-        <li><strong>近くから参加をリクエストします。</strong>グループを作った人が「グループ情報」を開き、<strong>近くの人を追加</strong>をタップします。あなたは<strong>+</strong>をタップし、<strong>参加</strong>、<strong>近くのグループを探す</strong>、<strong>参加をリクエスト</strong>をタップします。相手は両方の画面に同じ3つの絵文字が表示されていることを確認してから、<strong>許可</strong>をタップします。</li>
+        <li><strong>近くから参加をリクエストします。</strong>グループを作った人が「グループ情報」を開き、<strong>近くの人を追加</strong>をタップします。あなたは<strong>+</strong>をタップし、<strong>参加</strong>、<strong>近くのグループを探す</strong>、<strong>参加をリクエスト</strong>をタップします。相手は両方の画面に同じ3つの絵文字が表示されていることを確認してから、<strong>許可</strong>をタップします。両方の端末にFlightChat 1.2以降が必要です。どちらかが古いバージョンの場合はFlightChatがそう表示します。QRコードはそのまま使えます。</li>
         <li><strong>リンクを受け取った場合は</strong>、タップするとFlightChatが開き、すぐに参加できます。<strong>+</strong> →<strong>参加</strong>でコードを入力することもできます。大文字・小文字や空白は区別されません。</li>
       </ul>
       <h3>グループの名前変更・共有・退出</h3>
@@ -291,23 +297,23 @@
       <p><strong>コードは人に教えないでください。</strong>コードやQRコードを持っている人は誰でもグループに参加してチャットを読めます。近くから参加をリクエストされたら、知っている人だけを許可し、絵文字が一致していることを確認してください。</p>
       <div class="shots">
         <figure>
-          <img src="../help-create.ja.jpg" width="600" height="1303" alt="「新規グループ」画面。名前は Ski trip で、自動で作られたコード、「コードを共有」ボタン、グループのQRコードが表示されています。" loading="lazy">
+          <img class="phone-shot" src="../help-create.ja.jpg" width="600" height="1303" alt="「新規グループ」画面。名前は Ski trip で、自動で作られたコード、「コードを共有」ボタン、グループのQRコードが表示されています。" loading="lazy"><img class="ipad-shot" src="../help-create.ipad.ja.jpg" width="900" height="1200" alt="「新規グループ」画面。名前は Ski trip で、自動で作られたコード、「コードを共有」ボタン、グループのQRコードが表示されています。" loading="lazy">
           <figcaption>新規グループ：名前を付けるとコードが作られます</figcaption>
         </figure>
         <figure>
-          <img src="../help-join.ja.jpg" width="600" height="1303" alt="「グループに参加」画面。「近くのグループを探す」「QRコードをスキャン」と、コードを入力する欄があります。" loading="lazy">
+          <img class="phone-shot" src="../help-join.ja.jpg" width="600" height="1303" alt="「グループに参加」画面。「近くのグループを探す」「QRコードをスキャン」と、コードを入力する欄があります。" loading="lazy"><img class="ipad-shot" src="../help-join.ipad.ja.jpg" width="900" height="1200" alt="「グループに参加」画面。「近くのグループを探す」「QRコードをスキャン」と、コードを入力する欄があります。" loading="lazy">
           <figcaption>参加：近くのグループを探すか、QRコードをスキャン</figcaption>
         </figure>
         <figure>
-          <img src="../help-nearby.ja.jpg" width="600" height="1303" alt="「近くのグループ」に、Coach Dana が作った Soccer team と「参加をリクエスト」ボタンが表示されています。" loading="lazy">
+          <img class="phone-shot" src="../help-nearby.ja.jpg" width="600" height="1303" alt="「近くのグループ」に、Coach Dana が作った Soccer team と「参加をリクエスト」ボタンが表示されています。" loading="lazy"><img class="ipad-shot" src="../help-nearby.ipad.ja.jpg" width="900" height="1200" alt="「近くのグループ」に、Coach Dana が作った Soccer team と「参加をリクエスト」ボタンが表示されています。" loading="lazy">
           <figcaption>近くのグループ：「参加をリクエスト」をタップ</figcaption>
         </figure>
         <figure>
-          <img src="../help-add-people.ja.jpg" width="600" height="1303" alt="「近くの人を追加」に、グループのQRコードと、参加をリクエストしている Noa、3つの絵文字、「許可」「拒否」ボタンが表示されています。" loading="lazy">
+          <img class="phone-shot" src="../help-add-people.ja.jpg" width="600" height="1303" alt="「近くの人を追加」に、グループのQRコードと、参加をリクエストしている Noa、3つの絵文字、「許可」「拒否」ボタンが表示されています。" loading="lazy"><img class="ipad-shot" src="../help-add-people.ipad.ja.jpg" width="900" height="1200" alt="「近くの人を追加」に、グループのQRコードと、参加をリクエストしている Noa、3つの絵文字、「許可」「拒否」ボタンが表示されています。" loading="lazy">
           <figcaption>近くの人を追加：絵文字を確認して「許可」</figcaption>
         </figure>
         <figure>
-          <img src="../help-group-info.ja.jpg" width="600" height="1303" alt="「グループ情報」に、グループ名、コードと「コードを共有」、QRコードが表示されています。" loading="lazy">
+          <img class="phone-shot" src="../help-group-info.ja.jpg" width="600" height="1303" alt="「グループ情報」に、グループ名、コードと「コードを共有」、QRコードが表示されています。" loading="lazy"><img class="ipad-shot" src="../help-group-info.ipad.ja.jpg" width="900" height="1200" alt="「グループ情報」に、グループ名、コードと「コードを共有」、QRコードが表示されています。" loading="lazy">
           <figcaption>グループ情報：名前、コード、QRコード</figcaption>
         </figure>
       </div>
@@ -319,22 +325,27 @@
       <ul>
         <li><strong>グループチャットと1対1のチャット：</strong>グループごとにチャットがあります。<strong>メンバー</strong>には、同じグループにいる全員が表示されます。個別にメッセージを送るには、名前をタップします。同じ名前の人がいる場合は、所属グループが表示されます。同じグループにいなくなった人は<strong>過去のチャット</strong>に移動します。チャットは読めますが、新しいメッセージは再び同じグループに入るまで送信待ちになります。左にスワイプすると削除できます。</li>
         <li><strong>写真、ビデオ、GIF、ファイル：</strong>メッセージ欄の横の <strong>+</strong> をタップします。<strong>写真またはビデオを撮る</strong>でカメラを使う（ビデオは最長2分）か、手元のものを選びます。スマイルマークをタップするとステッカーやGIFを送れます。</li>
+        <li><strong>ステッカー：</strong>メッセージ欄のスマイルマークをタップします。旅行、家族、気持ち、バケーションの4つのパックがあり、下のアイコンをタップするとそのパックに移動します。無料で、インターネットがなくても使えます。</li>
         <li><strong>リアクション：</strong>メッセージを長押しして絵文字を選びます。そこからテキストをコピーすることもできます。</li>
+        <li><strong>返信：</strong>メッセージを右にスワイプするか、長押しして<strong>返信</strong>をタップします。返信先のメッセージが自分のメッセージの上に表示され、タップすると元のメッセージに戻れます。古いバージョンのFlightChatを使っている人には、返信先なしで届きます。</li>
+        <li><strong>ボイスメッセージ：</strong>メッセージ欄が空のときに、横にあるマイクボタンを長押ししながら話し、指を離すと送信されます。送らずに取り消すには、指を離す前に左へスライドします。ボイスメッセージをタップすると再生されます。ボイスメッセージは最長2分です。古いバージョンのFlightChatを使っている人には、音声ファイルとして届きます。</li>
+        <li><strong>マイノートとゲーム：</strong>チャットリストのグループの上に、自分だけが見られる日記があります。メモを書いたり、写真、ステッカー、ボイスメッセージを追加したりできます。内容はこのデバイスだけに保存され、送信されることはありません。メモは日付ごとにまとめて表示されます。メモを長押しすると、編集や削除ができます。グループに参加する前から、いつでも使えます。</li>
+        <li><strong>チャットのテーマ（Pro）：</strong>チャットで <strong>⋯</strong> をタップし、<strong>チャットのテーマ</strong>をタップして、クラシック、オーシャン、サンセット、フォレスト、夜空、キャンディから選びます。テーマはチャットごとに、このデバイスだけに保存されます。チャットはそれぞれ自分のテーマで表示されます。</li>
         <li><strong>全画面：</strong>写真やビデオをタップします。iPhoneを横にすると大きく表示されます。共有ボタンで保存できます。</li>
         <li><strong>チェックマーク：</strong><kbd>✓</kbd> はメッセージが保存され、接続中の人に送信されたことを示します。<kbd>✓✓</kbd> は宛先の全員に届いたことを示します。</li>
         <li><strong>近くにいない場合：</strong>接続していない人へのメッセージは、再接続したときに送信されます。</li>
       </ul>
       <div class="shots">
         <figure>
-          <img src="../help-group-chat.ja.jpg" width="600" height="1303" alt="Dad、Mia、Mom のメッセージ、Wheels up! ステッカー、窓から撮った雲の写真とリアクション、ダブルチェックがあるグループチャット。" loading="lazy">
+          <img class="phone-shot" src="../help-group-chat.ja.jpg" width="600" height="1303" alt="Dad、Mia、Mom のメッセージ、Wheels up! ステッカー、窓から撮った雲の写真とリアクション、ダブルチェックがあるグループチャット。" loading="lazy"><img class="ipad-shot" src="../help-group-chat.ipad.ja.jpg" width="900" height="1200" alt="Dad、Mia、Mom のメッセージ、Wheels up! ステッカー、窓から撮った雲の写真とリアクション、ダブルチェックがあるグループチャット。" loading="lazy">
           <figcaption>ステッカー、写真、リアクションのあるグループチャット</figcaption>
         </figure>
         <figure>
-          <img src="../help-reactions.ja.jpg" width="600" height="1303" alt="メッセージを長押しすると、リアクション用の絵文字とコピーボタンが表示されます。" loading="lazy">
+          <img class="phone-shot" src="../help-reactions.ja.jpg" width="600" height="1303" alt="メッセージを長押しすると、リアクション用の絵文字とコピーボタンが表示されます。" loading="lazy"><img class="ipad-shot" src="../help-reactions.ipad.ja.jpg" width="900" height="1200" alt="メッセージを長押しすると、リアクション用の絵文字とコピーボタンが表示されます。" loading="lazy">
           <figcaption>メッセージを長押ししてリアクション</figcaption>
         </figure>
         <figure>
-          <img src="../help-attach.ja.jpg" width="600" height="1303" alt="+ メニュー。「写真またはビデオを撮る」「写真、ビデオ、GIF」「GIFとステッカー」「ファイル」。" loading="lazy">
+          <img class="phone-shot" src="../help-attach.ja.jpg" width="600" height="1303" alt="+ メニュー。「写真またはビデオを撮る」「写真、ビデオ、GIF」「GIFとステッカー」「ファイル」。" loading="lazy"><img class="ipad-shot" src="../help-attach.ipad.ja.jpg" width="900" height="1200" alt="+ メニュー。「写真またはビデオを撮る」「写真、ビデオ、GIF」「GIFとステッカー」「ファイル」。" loading="lazy">
           <figcaption>+ で写真、ビデオ、GIF、ステッカー、ファイルを送信</figcaption>
         </figure>
       </div>
@@ -355,7 +366,7 @@
       <p><a href="#rules">各ゲームのルール ↓</a></p>
       <div class="shots">
         <figure>
-          <img src="../help-game.ja.jpg" width="600" height="1303" alt="Mom との三目並べ：Mom が中央と角を取り、あなたが反対の角を取っていて、あなたの番です。" loading="lazy">
+          <img class="phone-shot" src="../help-game.ja.jpg" width="600" height="1303" alt="Mom との三目並べ：Mom が中央と角を取り、あなたが反対の角を取っていて、あなたの番です。" loading="lazy"><img class="ipad-shot" src="../help-game.ipad.ja.jpg" width="900" height="1200" alt="Mom との三目並べ：Mom が中央と角を取り、あなたが反対の角を取っていて、あなたの番です。" loading="lazy">
           <figcaption>Mom と三目並べ：あなたの番</figcaption>
         </figure>
       </div>
@@ -368,12 +379,13 @@
         <li><strong>戦争：</strong>それぞれ一番上のカードをめくり、強い方が両方をもらいます（エースが最強）。引き分けのときは、次の回の勝者がそのカードももらいます。26 回戦のあと、多くのカードを取った方の勝ちです。</li>
         <li><strong>クレイジーエイト：</strong>それぞれ 7 枚から始めます。場札と同じスートか同じ数字のカードを出すか、山札から引きます。8 はいつでも出せて、次のスートを決められます。先に手札をすべて出した方の勝ちです。</li>
         <li><strong>ジンラミー：</strong>それぞれ 10 枚から始めます。自分の番では、山札か捨て札から 1 枚引き、1 枚捨てます。同じ数字 3〜4 枚、または同じスートの 3 枚以上の連番で役を作ります。残りのカードが 10 点以下ならノックしてこの回を終えられ、0 点ならジンです。</li>
+        <li><strong>ソリティア：</strong>1人で遊ぶゲームなので、近くに誰もいなくても遊べます。<strong>マイノートとゲーム</strong>で <strong>+</strong> をタップし、<strong>ゲームをする</strong>、<strong>ソリティア</strong>の順にタップして、かんたん（1枚ずつめくる）またはむずかしい（3枚ずつ）を選びます。勝った回数とベストタイムはこのデバイスにだけ保存されます。</li>
         <li><strong>3〜4 人のグループゲーム：</strong>グループチャットで <strong>+</strong> をタップし、<strong>ゲームをする</strong>をタップして、クレイジーエイトかジンラミーを選びます。一緒に遊ぶ人を 2〜3 人選び（近くにいる人は最初から選ばれています）、<strong>配る</strong>をタップします。順番に回ってプレイします。クレイジーエイトは全員 5 枚、ジンラミーは 3 人なら 10 枚ずつ、4 人なら 7 枚ずつで、誰かがノックすると他の全員が付け札をして点数を数えます。グループの全員がゲームを見られますが、カードが配られるのはプレイヤーだけで、他の人の手札は誰にも見えません。</li>
       </ul>
       <p>手札は自分のiPhoneにだけ表示されます。相手に見えるのは枚数だけで、どのカードかは見えません。ジンラミーの最後には得点を確認できるよう、両方の手札が表示されます。</p>
       <div class="shots">
         <figure>
-          <img src="../help-cards.ja.jpg" width="600" height="1303" alt="Dad とのジンラミー：上に Dad の裏向きの 10 枚、中央に山札と捨て札、下に役と残りのカードに分けられたあなたの手札。" loading="lazy">
+          <img class="phone-shot" src="../help-cards.ja.jpg" width="600" height="1303" alt="Dad とのジンラミー：上に Dad の裏向きの 10 枚、中央に山札と捨て札、下に役と残りのカードに分けられたあなたの手札。" loading="lazy"><img class="ipad-shot" src="../help-cards.ipad.ja.jpg" width="900" height="1200" alt="Dad とのジンラミー：上に Dad の裏向きの 10 枚、中央に山札と捨て札、下に役と残りのカードに分けられたあなたの手札。" loading="lazy">
           <figcaption>Dad とジンラミー：あなたが引く番</figcaption>
         </figure>
       </div>
@@ -381,7 +393,7 @@
 
     <section id="pro">
       <h2>FlightChat Pro</h2>
-      <p>FlightChat は、チャット、写真、ステッカー、ほとんどのゲームを無料で使えます。<strong>FlightChat Pro</strong> は 1 回限りの購入で、バックギャモン、クレイジーエイト、ジンラミーを始められるようになります。購入するまで、ゲーム一覧ではこれらに <strong>Pro</strong> と表示されます。</p>
+      <p>FlightChat は、チャット、写真、ステッカー、ほとんどのゲームを無料で使えます。<strong>FlightChat Pro</strong> は 1 回限りの購入で、バックギャモン、クレイジーエイト、ジンラミーを始められるようになります。購入するまで、ゲーム一覧ではこれらに <strong>Pro</strong> と表示されます。チャットのテーマも使えるようになります。</p>
       <p>Pro が必要なのは、Pro のゲームを始める人だけです。Pro がない友だちも、あなたが始めたゲームに 1 対 1 でもグループでも参加して遊べます。</p>
       <p><strong>設定 → FlightChat Pro</strong> から、または Pro のゲームをタップして購入できます。1 回払いでサブスクリプションではなく、ファミリー共有で家族と共有できます。購入にはインターネットが必要なので、搭乗前に購入してください。購入後は Pro をオフラインで使えます。新しい iPhone では<strong>購入を復元</strong>をタップします。</p>
     </section>
@@ -448,6 +460,14 @@
         <li>捨てたあとのデッドウッドが 10 点以下なら、ノックしてこの回を終えられます。0 点ならジンです。ほかのプレイヤーは、ノックした人の役に付けられるカードを付けます（ジンのときは付けられません）。</li>
         <li>得点：ノックした人は、ほかの各プレイヤーとのデッドウッドの差をもらいます。ジンは全員のデッドウッドに 25 点を加えた点数です。ノックした人と同じかそれ以下のデッドウッドの人はアンダーカットとなり、差に 25 点を加えた点数をもらいます。山札が残り 2 枚になったら、その回は引き分けです。</li>
       </ul>
+      <h3 id="rules-solitaire">ソリティア</h3>
+      <ul>
+        <li>7つの列に配ります。1列目に1枚、次に2枚と、7枚まで配り、各列のいちばん上のカードだけを表にします。残りのカードは山札になります。</li>
+        <li>目的は、すべてのカードを上の4つの場所へ、マークごとにエースからキングまで順番に移すことです。</li>
+        <li>列では、ひとつ大きい数字で色の違うカードの上に置けます。たとえば黒の7の上に赤の6。上に重なっているカードごと動かすこともできます。空いた列に置けるのはキングだけです。列の最後の表向きのカードを動かすと、その下のカードが表になります。</li>
+        <li>山札をタップするとカードがめくれます。かんたんでは1枚ずつ、むずかしいでは3枚ずつで、出せるのはいちばん上の1枚だけです。山札がなくなったら、タップしてカードを戻し、もう一度めくれます。</li>
+        <li>カードをタップすると置ける場所へ動きます。まず上の同じマークの場所が優先されます。<strong>取り消す</strong>で1手戻せます。すべてのカードが表になったら、<strong>完了</strong>で残りを自動で進めます。</li>
+      </ul>
     </section>
 
     <section>
@@ -455,7 +475,7 @@
       <p>チャットを開き、<strong>⋯</strong> をタップしてから<strong>チャットを書き出す</strong>をタップします。会話のテキストと、このiPhoneにある写真・ビデオ・ファイルを含むZIPファイルが作られます。「ファイル」に保存したり、AirDropで送ったり、オンラインに戻ってからメールで送ったりできます。</p>
       <div class="shots">
         <figure>
-          <img src="../help-chat-menu.ja.jpg" width="600" height="1303" alt="グループチャットの ⋯ メニュー。「グループ情報」と「チャットを書き出す」。" loading="lazy">
+          <img class="phone-shot" src="../help-chat-menu.ja.jpg" width="600" height="1303" alt="グループチャットの ⋯ メニュー。「グループ情報」と「チャットを書き出す」。" loading="lazy"><img class="ipad-shot" src="../help-chat-menu.ipad.ja.jpg" width="900" height="1200" alt="グループチャットの ⋯ メニュー。「グループ情報」と「チャットを書き出す」。" loading="lazy">
           <figcaption>⋯ で「グループ情報」と「チャットを書き出す」</figcaption>
         </figure>
       </div>

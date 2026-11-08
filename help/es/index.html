@@ -198,6 +198,10 @@
     border-radius: 20px; border: 1px solid var(--line); background: var(--surface);
     box-shadow: 0 8px 22px rgb(21 26 51 / 0.10);
   }
+  /* On an iPad the app adds class="ipad", and the iPad pictures replace the iPhone ones where both exist. */
+  .shots .ipad-shot { display: none; }
+  html.ipad .shots .ipad-shot { display: block; border-radius: 14px; }
+  html.ipad .shots .phone-shot { display: none; }
   .shots figcaption { font-size: 0.85rem; line-height: 1.4; color: var(--muted); text-align: center; }
   .languages { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.9rem; }
   .languages a { color: var(--muted); text-decoration: none; }
@@ -246,12 +250,14 @@
       <h2>Antes de volar</h2>
       <p>Prepáralo todo mientras estáis juntos en casa o en la puerta de embarque:</p>
       <ol>
-        <li>Instala FlightChat en todos los teléfonos del grupo.</li>
+        <li>Instala FlightChat en todos los iPhone y iPad del grupo.</li>
         <li>Una persona crea el grupo: en la primera pantalla, elige <strong>Nuevo grupo</strong> y ponle un nombre.</li>
         <li>Los demás se unen: escanean el código QR del grupo, o eligen <strong>Unirse a un grupo</strong> y piden unirse cuando están cerca. Consulta «Unirse a un grupo» más abajo.</li>
         <li>Envía un mensaje de prueba y comprueba que todos lo reciben.</li>
       </ol>
-      <p>La primera vez que abras FlightChat, permite que busque dispositivos en tu red local. Sin esto no puede encontrar a tu grupo.</p>
+      <p>La primera vez que abras FlightChat, permite que busque dispositivos en tu red local. Sin esto no puede encontrar a tu grupo. Para empezar sin grupo, por ejemplo para escribir notas o jugar al Solitario primero, toca <strong>✕</strong> en la primera pantalla; puedes crear o unirte a uno más tarde con <strong>+</strong>.</p>
+      <p>Después de configurar FlightChat, un breve tutorial muestra lo básico. Para verlo otra vez, abre Ajustes y toca <strong>Ver el tutorial</strong>.</p>
+      <p>FlightChat funciona en iPhone y iPad, que pueden chatear y jugar juntos. En el iPad, la lista de chats se queda junto al chat abierto, y puedes girar el iPad en cualquier dirección o usar FlightChat junto a otra app.</p>
     </section>
 
     <section>
@@ -264,7 +270,7 @@
       <p>Los teléfonos solo se conectan mientras FlightChat está abierto. Cuando vuelves a la app, se reconectan solos y recuperan lo que se perdieron.</p>
       <div class="shots">
         <figure>
-          <img src="../help-chats.es.jpg" width="600" height="1303" alt="La lista de chats de FlightChat: una tarjeta de estado arriba, luego dos grupos, Family y Beach trip, y una sección Personas con Mom, Dad, Sam y Mia." loading="lazy">
+          <img class="phone-shot" src="../help-chats.es.jpg" width="600" height="1303" alt="La lista de chats de FlightChat: una tarjeta de estado arriba, luego dos grupos, Family y Beach trip, y una sección Personas con Mom, Dad, Sam y Mia." loading="lazy"><img class="ipad-shot" src="../help-chats.ipad.es.jpg" width="900" height="1200" alt="La lista de chats de FlightChat: una tarjeta de estado arriba, luego dos grupos, Family y Beach trip, y una sección Personas con Mom, Dad, Sam y Mia." loading="lazy">
           <figcaption>La lista de chats: quién está conectado, tus grupos y sus miembros</figcaption>
         </figure>
       </div>
@@ -283,7 +289,7 @@
       <p>Hay tres formas:</p>
       <ul>
         <li><strong>Escanea el código QR</strong> de Información del grupo en el teléfono de un miembro. Apunta la cámara del iPhone al código y toca el aviso, o en FlightChat toca <strong>+</strong>, luego <strong>Unirse</strong> y <strong>Escanear código QR</strong>.</li>
-        <li><strong>Pide unirte estando cerca.</strong> Quien creó el grupo abre Información del grupo y toca <strong>Añadir personas cercanas</strong>. Tú tocas <strong>+</strong>, luego <strong>Unirse</strong>, <strong>Buscar grupos cercanos</strong> y <strong>Pedir unirse</strong>. Esa persona comprueba que ambas pantallas muestran los mismos tres emojis y toca <strong>Permitir</strong>.</li>
+        <li><strong>Pide unirte estando cerca.</strong> Quien creó el grupo abre Información del grupo y toca <strong>Añadir personas cercanas</strong>. Tú tocas <strong>+</strong>, luego <strong>Unirse</strong>, <strong>Buscar grupos cercanos</strong> y <strong>Pedir unirse</strong>. Esa persona comprueba que ambas pantallas muestran los mismos tres emojis y toca <strong>Permitir</strong>. Los dos teléfonos necesitan FlightChat 1.2 o posterior; si uno tiene una versión anterior, FlightChat lo indica, y el código QR sigue funcionando.</li>
         <li><strong>¿Te han enviado un enlace?</strong> Tócalo para abrir FlightChat listo para unirte. También puedes escribir el código en <strong>+</strong> → <strong>Unirse</strong>; las mayúsculas y los espacios no importan.</li>
       </ul>
       <h3>Cambiar el nombre, compartir o salir de un grupo</h3>
@@ -291,23 +297,23 @@
       <p><strong>No compartas los códigos con desconocidos.</strong> Cualquiera que tenga el código o el código QR puede unirse al grupo y leer su chat. Cuando alguien cercano pida unirse, permite solo a quien conozcas y comprueba que los emojis coinciden.</p>
       <div class="shots">
         <figure>
-          <img src="../help-create.es.jpg" width="600" height="1303" alt="La pantalla Nuevo grupo con el nombre Ski trip, un código generado, el botón Compartir código y el código QR del grupo." loading="lazy">
+          <img class="phone-shot" src="../help-create.es.jpg" width="600" height="1303" alt="La pantalla Nuevo grupo con el nombre Ski trip, un código generado, el botón Compartir código y el código QR del grupo." loading="lazy"><img class="ipad-shot" src="../help-create.ipad.es.jpg" width="900" height="1200" alt="La pantalla Nuevo grupo con el nombre Ski trip, un código generado, el botón Compartir código y el código QR del grupo." loading="lazy">
           <figcaption>Nuevo grupo: ponle nombre y se crea un código</figcaption>
         </figure>
         <figure>
-          <img src="../help-join.es.jpg" width="600" height="1303" alt="La pantalla Unirse a un grupo con Buscar grupos cercanos, Escanear código QR y un campo para escribir un código." loading="lazy">
+          <img class="phone-shot" src="../help-join.es.jpg" width="600" height="1303" alt="La pantalla Unirse a un grupo con Buscar grupos cercanos, Escanear código QR y un campo para escribir un código." loading="lazy"><img class="ipad-shot" src="../help-join.ipad.es.jpg" width="900" height="1200" alt="La pantalla Unirse a un grupo con Buscar grupos cercanos, Escanear código QR y un campo para escribir un código." loading="lazy">
           <figcaption>Unirse: busca un grupo cercano o escanea su código QR</figcaption>
         </figure>
         <figure>
-          <img src="../help-nearby.es.jpg" width="600" height="1303" alt="Grupos cercanos con Soccer team, creado por Coach Dana, y un botón Pedir unirse." loading="lazy">
+          <img class="phone-shot" src="../help-nearby.es.jpg" width="600" height="1303" alt="Grupos cercanos con Soccer team, creado por Coach Dana, y un botón Pedir unirse." loading="lazy"><img class="ipad-shot" src="../help-nearby.ipad.es.jpg" width="900" height="1200" alt="Grupos cercanos con Soccer team, creado por Coach Dana, y un botón Pedir unirse." loading="lazy">
           <figcaption>Grupos cercanos: toca Pedir unirse</figcaption>
         </figure>
         <figure>
-          <img src="../help-add-people.es.jpg" width="600" height="1303" alt="Añadir personas cercanas con el código QR del grupo y Noa pidiendo unirse, con tres emojis y los botones Permitir y Rechazar." loading="lazy">
+          <img class="phone-shot" src="../help-add-people.es.jpg" width="600" height="1303" alt="Añadir personas cercanas con el código QR del grupo y Noa pidiendo unirse, con tres emojis y los botones Permitir y Rechazar." loading="lazy"><img class="ipad-shot" src="../help-add-people.ipad.es.jpg" width="900" height="1200" alt="Añadir personas cercanas con el código QR del grupo y Noa pidiendo unirse, con tres emojis y los botones Permitir y Rechazar." loading="lazy">
           <figcaption>Añadir personas cercanas: comprueba los emojis y toca Permitir</figcaption>
         </figure>
         <figure>
-          <img src="../help-group-info.es.jpg" width="600" height="1303" alt="Información del grupo con el nombre, el código con Compartir código y el código QR." loading="lazy">
+          <img class="phone-shot" src="../help-group-info.es.jpg" width="600" height="1303" alt="Información del grupo con el nombre, el código con Compartir código y el código QR." loading="lazy"><img class="ipad-shot" src="../help-group-info.ipad.es.jpg" width="900" height="1200" alt="Información del grupo con el nombre, el código con Compartir código y el código QR." loading="lazy">
           <figcaption>Información del grupo: nombre, código y código QR</figcaption>
         </figure>
       </div>
@@ -319,22 +325,27 @@
       <ul>
         <li><strong>Chats de grupo e individuales:</strong> cada grupo tiene su propio chat. <strong>Personas</strong> muestra a todos con quienes compartes un grupo; para escribir en privado a alguien, toca su nombre. Si dos personas se llaman igual, se muestra su grupo. Quienes ya no comparten grupo contigo pasan a <strong>Chats anteriores</strong>: puedes seguir leyendo esos chats, pero los mensajes nuevos esperan hasta que volváis a estar en un grupo. Desliza a la izquierda para eliminar uno.</li>
         <li><strong>Fotos, vídeos, GIF y archivos:</strong> toca <strong>+</strong> junto al campo de mensaje. Elige <strong>Hacer foto o vídeo</strong> para usar la cámara (vídeos de hasta 2 minutos) o elige algo que ya tengas. Toca la carita para stickers y GIF.</li>
+        <li><strong>Stickers:</strong> toca la cara sonriente en el cuadro de mensaje. Hay cuatro paquetes, Viaje, Familia, Emociones y Vacaciones; toca un icono de abajo para ir a uno. Son gratis y funcionan sin internet.</li>
         <li><strong>Reacciones:</strong> mantén pulsado un mensaje y elige un emoji. Desde ahí también puedes copiar el texto.</li>
+        <li><strong>Responder:</strong> desliza un mensaje hacia la derecha, o mantenlo pulsado y toca <strong>Responder</strong>. El mensaje al que respondes aparece encima del tuyo; tócalo para volver a él. Quien todavía tenga una versión anterior de FlightChat recibe tu respuesta sin él.</li>
+        <li><strong>Mensaje de voz:</strong> cuando el campo de mensaje esté vacío, mantén pulsado el botón del micrófono que hay al lado y habla; suelta para enviar. Para descartarlo, desliza el dedo hacia la izquierda antes de soltar. Toca un mensaje de voz para escucharlo. Los mensajes de voz pueden durar hasta 2 minutos. Quien todavía tenga una versión anterior de FlightChat lo recibe como archivo de audio.</li>
+        <li><strong>Mis notas y juegos:</strong> en la lista de chats, encima de tus grupos, hay un diario que solo tú puedes ver. Escribe notas y añade fotos, stickers o mensajes de voz; se quedan en este dispositivo y nunca se envían. Las notas de cada día aparecen bajo su fecha. Mantén pulsada una nota para editarla o eliminarla. Siempre está ahí, incluso antes de unirte a un grupo.</li>
+        <li><strong>Temas de chat (Pro):</strong> en un chat, toca <strong>⋯</strong>, luego <strong>Tema del chat</strong>, y elige Clásico, Océano, Atardecer, Bosque, Cielo nocturno o Caramelo. Cada chat guarda el suyo, solo en este dispositivo: cada persona ve el chat con su propio tema.</li>
         <li><strong>Pantalla completa:</strong> toca una foto o un vídeo. Gira el teléfono para verlo más grande. Usa el botón de compartir para guardarlo.</li>
         <li><strong>Marcas:</strong> <kbd>✓</kbd> significa que el mensaje se guardó y se envió a quienes estén conectados. <kbd>✓✓</kbd> significa que todos sus destinatarios lo tienen.</li>
         <li><strong>¿No está cerca?</strong> Los mensajes a personas no conectadas se envían cuando os volvéis a conectar.</li>
       </ul>
       <div class="shots">
         <figure>
-          <img src="../help-group-chat.es.jpg" width="600" height="1303" alt="Un chat de grupo con mensajes de Dad, Mia y Mom, un sticker Wheels up!, una foto de nubes desde la ventanilla con reacciones y dobles marcas." loading="lazy">
+          <img class="phone-shot" src="../help-group-chat.es.jpg" width="600" height="1303" alt="Un chat de grupo con mensajes de Dad, Mia y Mom, un sticker Wheels up!, una foto de nubes desde la ventanilla con reacciones y dobles marcas." loading="lazy"><img class="ipad-shot" src="../help-group-chat.ipad.es.jpg" width="900" height="1200" alt="Un chat de grupo con mensajes de Dad, Mia y Mom, un sticker Wheels up!, una foto de nubes desde la ventanilla con reacciones y dobles marcas." loading="lazy">
           <figcaption>Un chat de grupo con un sticker, una foto y reacciones</figcaption>
         </figure>
         <figure>
-          <img src="../help-reactions.es.jpg" width="600" height="1303" alt="Al mantener pulsado un mensaje aparece una fila de emojis para reaccionar y un botón para copiar." loading="lazy">
+          <img class="phone-shot" src="../help-reactions.es.jpg" width="600" height="1303" alt="Al mantener pulsado un mensaje aparece una fila de emojis para reaccionar y un botón para copiar." loading="lazy"><img class="ipad-shot" src="../help-reactions.ipad.es.jpg" width="900" height="1200" alt="Al mantener pulsado un mensaje aparece una fila de emojis para reaccionar y un botón para copiar." loading="lazy">
           <figcaption>Mantén pulsado un mensaje para reaccionar</figcaption>
         </figure>
         <figure>
-          <img src="../help-attach.es.jpg" width="600" height="1303" alt="El menú + con Hacer foto o vídeo, Foto, vídeo o GIF, GIF y stickers, y Archivo." loading="lazy">
+          <img class="phone-shot" src="../help-attach.es.jpg" width="600" height="1303" alt="El menú + con Hacer foto o vídeo, Foto, vídeo o GIF, GIF y stickers, y Archivo." loading="lazy"><img class="ipad-shot" src="../help-attach.ipad.es.jpg" width="900" height="1200" alt="El menú + con Hacer foto o vídeo, Foto, vídeo o GIF, GIF y stickers, y Archivo." loading="lazy">
           <figcaption>+ envía fotos, vídeos, GIF, stickers y archivos</figcaption>
         </figure>
       </div>
@@ -355,7 +366,7 @@
       <p><a href="#rules">Las reglas de cada juego ↓</a></p>
       <div class="shots">
         <figure>
-          <img src="../help-game.es.jpg" width="600" height="1303" alt="Una partida de tres en raya con Mom: Mom tiene el centro y una esquina, tú la esquina opuesta, y te toca." loading="lazy">
+          <img class="phone-shot" src="../help-game.es.jpg" width="600" height="1303" alt="Una partida de tres en raya con Mom: Mom tiene el centro y una esquina, tú la esquina opuesta, y te toca." loading="lazy"><img class="ipad-shot" src="../help-game.ipad.es.jpg" width="900" height="1200" alt="Una partida de tres en raya con Mom: Mom tiene el centro y una esquina, tú la esquina opuesta, y te toca." loading="lazy">
           <figcaption>Tres en raya con Mom: te toca</figcaption>
         </figure>
       </div>
@@ -368,12 +379,13 @@
         <li><strong>Guerra:</strong> cada uno da la vuelta a su carta de arriba y la más alta se lleva las dos (el as es la más alta). Si empatan, el ganador de la siguiente ronda se las lleva también. Tras 26 rondas, gana quien haya ganado más cartas.</li>
         <li><strong>Ocho loco:</strong> siete cartas cada uno. Juega una carta del mismo palo o número que la de arriba del montón, o roba. Los ochos valen sobre cualquier carta y te dejan elegir el palo que sigue. Gana quien se quede antes sin cartas.</li>
         <li><strong>Gin rummy:</strong> diez cartas cada uno. En tu turno, roba del mazo o de los descartes y luego descarta. Forma combinaciones: tres o cuatro cartas del mismo número, o tres o más seguidas del mismo palo. Con 10 puntos sueltos o menos puedes cerrar la mano; sin ninguno, es gin.</li>
+        <li><strong>Solitario:</strong> un juego para una persona, así que no hace falta nadie cerca. En <strong>Mis notas y juegos</strong>, toca <strong>+</strong>, luego <strong>Jugar a un juego</strong> y <strong>Solitario</strong>, y elige Fácil (girar una carta cada vez) o Difícil (tres). Tus victorias y mejores tiempos se quedan en este dispositivo.</li>
         <li><strong>Juegos de grupo para 3 o 4:</strong> en un chat de grupo, toca <strong>+</strong>, luego <strong>Jugar a un juego</strong>, y elige Ocho loco o Gin rummy. Elige 2 o 3 personas (las que están cerca ya aparecen marcadas) y toca <strong>Repartir</strong>. Se juega por turnos. En Ocho loco cada uno recibe 5 cartas; en gin rummy, 10 cada uno con tres jugadores y 7 con cuatro, y cuando alguien cierra, los demás colocan sus cartas y cuentan. Todo el grupo ve la partida, pero solo los jugadores reciben cartas y nadie ve la mano de los demás.</li>
       </ul>
       <p>Tu mano solo aparece en tu teléfono; el otro jugador ve cuántas cartas tienes, no cuáles. Al final del gin rummy se muestran las dos manos para que podáis comprobar la puntuación.</p>
       <div class="shots">
         <figure>
-          <img src="../help-cards.es.jpg" width="600" height="1303" alt="Una partida de gin rummy con Dad: las diez cartas de Dad boca abajo arriba, el mazo y los descartes en el centro, y tu mano abajo, agrupada en combinaciones y cartas sueltas." loading="lazy">
+          <img class="phone-shot" src="../help-cards.es.jpg" width="600" height="1303" alt="Una partida de gin rummy con Dad: las diez cartas de Dad boca abajo arriba, el mazo y los descartes en el centro, y tu mano abajo, agrupada en combinaciones y cartas sueltas." loading="lazy"><img class="ipad-shot" src="../help-cards.ipad.es.jpg" width="900" height="1200" alt="Una partida de gin rummy con Dad: las diez cartas de Dad boca abajo arriba, el mazo y los descartes en el centro, y tu mano abajo, agrupada en combinaciones y cartas sueltas." loading="lazy">
           <figcaption>Gin rummy con Dad: te toca robar</figcaption>
         </figure>
       </div>
@@ -381,7 +393,7 @@
 
     <section id="pro">
       <h2>FlightChat Pro</h2>
-      <p>FlightChat es gratis, con los chats, las fotos, los stickers y la mayoría de los juegos. <strong>FlightChat Pro</strong> es una compra única que permite empezar backgammon, ocho loco y gin rummy. En la lista de juegos aparecen con <strong>Pro</strong> hasta que lo tengas.</p>
+      <p>FlightChat es gratis, con los chats, las fotos, los stickers y la mayoría de los juegos. <strong>FlightChat Pro</strong> es una compra única que permite empezar backgammon, ocho loco y gin rummy. En la lista de juegos aparecen con <strong>Pro</strong> hasta que lo tengas. También desbloquea los temas de chat.</p>
       <p>Solo quien empieza una partida Pro necesita Pro. Tus amigos que no lo tienen pueden unirse y jugar las partidas que empieces, de dos o en grupo.</p>
       <p>Cómpralo en <strong>Ajustes → FlightChat Pro</strong>, o tocando un juego Pro. Es un solo pago, sin suscripción, y se comparte con tu familia con En familia. Para comprar hace falta internet, así que cómpralo antes del vuelo; después, Pro funciona sin conexión. En un iPhone nuevo, toca <strong>Restaurar compras</strong>.</p>
     </section>
@@ -448,6 +460,14 @@
         <li>Cuando tus puntos sueltos sean 10 o menos tras descartar, puedes cerrar para terminar la mano; si no tienes ninguno, es gin. Los demás jugadores añaden entonces las cartas que puedan a las combinaciones de quien cerró (no tras un gin).</li>
         <li>Puntuación: quien cierra gana la diferencia de puntos sueltos con cada uno de los demás. El gin suma los puntos sueltos de todos más 25. Quien tenga tantos puntos sueltos o menos que quien cerró le contraataca y gana la diferencia más 25. Si al mazo le quedan 2 cartas, la mano es empate.</li>
       </ul>
+      <h3 id="rules-solitaire">Solitario</h3>
+      <ul>
+        <li>Se reparten siete montones: una carta en el primero, dos en el siguiente, y así hasta siete, con solo la carta de arriba de cada uno boca arriba. El resto de la baraja es el mazo.</li>
+        <li>El objetivo es subir todas las cartas a los cuatro espacios de arriba, uno por palo, en orden del as al rey.</li>
+        <li>En los montones, una carta va sobre otra de un valor más alto y del otro color: un 6 rojo sobre un 7 negro. Puedes mover una carta con las que tiene encima. Solo un rey va en un montón vacío. Al mover la última carta boca arriba de un montón, se da la vuelta a la de debajo.</li>
+        <li>Toca el mazo para dar la vuelta a cartas: una cada vez en Fácil y tres en Difícil, donde solo se puede jugar la de arriba. Cuando se acabe, tócalo para volver a poner las cartas y recorrerlas otra vez.</li>
+        <li>Toca una carta para moverla adonde encaje, primero al espacio de su palo arriba. <strong>Deshacer</strong> anula una jugada. Cuando todas las cartas están boca arriba, <strong>Terminar</strong> juega el resto por ti.</li>
+      </ul>
     </section>
 
     <section>
@@ -455,7 +475,7 @@
       <p>Abre el chat, toca <strong>⋯</strong> y luego <strong>Exportar chat</strong>. FlightChat crea un archivo ZIP con la conversación en texto y las fotos, vídeos y archivos que hay en tu teléfono. Guárdalo en Archivos, envíalo por AirDrop o por correo cuando vuelvas a tener conexión.</p>
       <div class="shots">
         <figure>
-          <img src="../help-chat-menu.es.jpg" width="600" height="1303" alt="El menú ⋯ de un chat de grupo con Información del grupo y Exportar chat." loading="lazy">
+          <img class="phone-shot" src="../help-chat-menu.es.jpg" width="600" height="1303" alt="El menú ⋯ de un chat de grupo con Información del grupo y Exportar chat." loading="lazy"><img class="ipad-shot" src="../help-chat-menu.ipad.es.jpg" width="900" height="1200" alt="El menú ⋯ de un chat de grupo con Información del grupo y Exportar chat." loading="lazy">
           <figcaption>⋯ abre Información del grupo y Exportar chat</figcaption>
         </figure>
       </div>
